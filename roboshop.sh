@@ -7,8 +7,8 @@ domain="swetha.fun"
 
 for instance in ${instances[@]}
 do 
-   instance_id= $(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-0a678a7f0d29620a4  --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$instance}]" --query "instance[0].instanceid" --output text)
-  if [ $instance !="frontened" ]
+   instance_id= $(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t2.micro --security-group-ids sg-0a678a7f0d29620a4  --tag-specifications "ResourceType=instance,Tags=[{Key=Name, Value=$instance}]" --query "instances[0].instanceid" --output text)
+  if [ $instance != "frontened" ]
   then 
      IP=$(aws ec2 describe-instances --instance-ids $instance_id --query "Reservations[0].Instances[0].PrivateIpAddress" --output text)
   else 
