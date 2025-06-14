@@ -1,4 +1,8 @@
 #!/bin/bash
+echo "AWS version:"
+which aws
+aws --version
+
 echo "running the script"
 AMI_ID="ami-09c813fb71547fc4f"
 SG_ID="sg-0a678a7f0d29620a4" # replace with your SG ID
