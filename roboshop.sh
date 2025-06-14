@@ -1,5 +1,5 @@
 #!/bin/bash
-
+echo "running the script"
 AMI_ID="ami-09c813fb71547fc4f"
 SG_ID="sg-0a678a7f0d29620a4" # replace with your SG ID
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "frontend")
