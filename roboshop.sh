@@ -6,7 +6,7 @@ INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipp
 ZONE_ID="Z06739001OLF9ITWI9A5S" # replace with your ZONE ID
 DOMAIN_NAME="swetha.fun" # replace with your domain
 
-#for instance in ${INSTANCES[@]}
+#for instance in ${INSTANCES[@]}JJJJJ
 for instance in $@
 do
     INSTANCE_ID=$(aws ec2 run-instances --image-id ami-09c813fb71547fc4f --instance-type t3.micro --security-group-ids sg-0a678a7f0d29620a4 
