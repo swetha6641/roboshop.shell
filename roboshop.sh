@@ -1,4 +1,5 @@
 #!/bin/bash
+export PATH=$PATH:/usr/local/bin
 echo "AWS version:"
 which aws
 aws --version
