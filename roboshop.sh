@@ -20,17 +20,17 @@ do
     --hosted-zone-id $zoneid \
     --change-batch '
     {
-       "comment" : "creating or updating a record for cognito"
+       "comment" : "creating or updating a record for cognito",
         "Changes": [
             {
-                "Action": "UPSERT",
-                "ResourceRecordSet": {
-                    "Name": "'$instance'.'$domain",
-                    "Type": "A",
-                    "TTL": 1,
-                    "ResourceRecords": [
+                "Action"  : "UPSERT",
+                "ResourceRecordSet"  : {
+                    "Name"  : "'$instance'.'$domain",
+                    "Type" : "A",
+                    "TTL" : 1,
+                    "ResourceRecords"  : [
                         {
-                            "Value": "'$IP'"
+                            "Value"  : "'$IP'"
                         }
                     ]
                 }
