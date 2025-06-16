@@ -8,7 +8,7 @@ N="\e[0m"
 Log_folder="/var/log/shellop-log"
 script=$(echo $0 | cut -d "." -f1)
 log_file="$Log_folder/$script.log"
-packages=("mysql" "nginx" "python" "httpd")
+
 
 mkdir -p $Log_folder
 echo "script started at :$(date)" | tee -a $log_file 
