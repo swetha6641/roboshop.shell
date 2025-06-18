@@ -78,7 +78,7 @@ dnf install mongodb-mongosh -y &>>$LOG_FILE
 VALIDATE $? "Installing MongoDB Client"
 
 STATUS=$(mongosh --host mongodb.swetha.fun --eval 'db.getMongo().getDBNames().indexOf("catalogue")')
-if [ $STATUS lt 0 ]
+if [ $STATUS -lt 0 ]
 then
     mongosh --host mongodb.swetha.fun </app/db/master-data.js &>>$LOG_FILE
     VALIDATE $? "Loading data into MongoDB"
