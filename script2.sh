@@ -1,4 +1,4 @@
-#!/bin/bash
-  echo "hi swetha"
-  echo "PID of script2: $$"
-  
+#!/usr/bin/env bash
+
+echo "hi swetha"
+echo "PID of script2: $$"
