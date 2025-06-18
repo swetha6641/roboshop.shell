@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
     greetings="HELLOOOO GM"
     echo "$greetings"
     echo "PID of script 1: $$"
