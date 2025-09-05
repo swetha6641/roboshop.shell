@@ -42,7 +42,7 @@ files=$(find . -name "*.log" -mtime +14)
 while IFS= read -r filepath
 do 
     echo "deleting files"
-    rm -rf $line
+    rm -rf $filepath
 done <<< $files
 
 echo "script executed"
