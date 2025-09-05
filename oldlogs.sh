@@ -23,7 +23,7 @@ else
     echo "You are running with root access" | tee -a $LOG_FILE
 fi
 
-# validate functions takes input as exit status, what command they tried to install
+# validate functions takes in put as exit status, what command they tried to install
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
@@ -37,7 +37,7 @@ VALIDATE(){
 
 echo "script started at $(date)"
 
-files=$(find . -name "*.log" -mtime +14)
+files=$(find . -$source -name "*.log" -mtime +14)
 
 while IFS= read -r filepath
 do 
