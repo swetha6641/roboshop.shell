@@ -12,6 +12,8 @@ SCRIPT_DIR=/home/ec2-user/app-logs
 
 echo "Script started executing at: $(date)" | tee -a $LOG_FILE
 
+mkdir -p $LOGS_FOLDER
+
 # check the user has root priveleges or not
 if [ $USERID -ne 0 ]
 then
@@ -32,7 +34,7 @@ VALIDATE(){
     fi
 }
 
-mkdir -p $LOGS_FOLDER
+
 echo "script started at $(date)"
 
 files=$(find . -name "*.log" -mtime +14)
