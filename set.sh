@@ -2,4 +2,4 @@
 
 echo " hello dhncnv"
 echhoooo "hekdnsb"
-echo :this is swetha"
+echo "this is swetha"
